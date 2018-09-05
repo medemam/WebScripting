@@ -1,0 +1,48 @@
+<!-- Marley Medema hw04 -->
+<!-- ascii.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ASCIImation</title>
+  <link rel="stylesheet" type="text/css" href="ascii.css">
+  <script src="ascii.js"></script>
+  <script src="animations.js"></script>
+  <script src="myanimation.js"></script>
+</head>
+<body>
+  <h1>CSCI 342 ASCII Animation Viewer</h1>
+  <textarea rows="20" cols="80" id="textbox">
+  </textarea>
+  <fieldset id="playcntl">
+    <legend>Play Controls:</legend>
+    <button type="button" id="start" onclick="playAnimation()">Start</button>
+    <button type="button" id="stop" onclick="stopAnimation()">Stop</button>
+  </fieldset>
+  <fieldset>
+    <legend>Animation:</legend>
+    <select id="animation" onchange="changeAnimation(value)">
+      <option value="Blank">Blank</option>
+      <option value="Exercise">Exercise</option>
+      <option value="Juggler">Juggler</option>
+      <option value="Dive">Dive</option>
+      <option value="Bike">Bike</option>
+      <option value="Custom">Custom</option>
+    </select>
+  </fieldset>
+  <fieldset>
+    <legend>Size:</legend>
+    <select  id="size" onchange="changeSize(value)">
+      <option value="7pt">Tiny</option>
+      <option value="10pt">Small</option>
+      <option value="12pt" selected>Medium</option>
+      <option value="16pt">Large</option>
+      <option value="24pt">Extra Large</option>
+      <option value="32pt">XXL</option>
+    </select>
+  </fieldset>
+  <fieldset>
+    <legend>Speed:</legend>
+    <input type="checkbox" value="turbo" id="speed" onchange="changeSpeed()">Turbo<br>
+  </fieldset>
+</body>
+</html>
